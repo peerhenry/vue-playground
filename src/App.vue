@@ -19,18 +19,22 @@ import HelloWorld from './components/HelloWorld.vue'
 export default class App extends Vue {}
 </script>
 
-<style lang="sass">
+<style lang="stylus">
+html, body
+  margin 0
+  padding 0
+
 #app
-  font-family: 'Avenir', Helvetica, Arial, sans-serif
-  -webkit-font-smoothing: antialiased
-  -moz-osx-font-smoothing: grayscale
-  text-align: center
-  color: #2c3e50
-  margin-top: 60px
+  font-family 'Avenir', Helvetica, Arial, sans-serif
+  -webkit-font-smoothing antialiased
+  -moz-osx-font-smoothing grayscale
+  text-align center
+  color #2c3e50
+  margin-top 60px
 
 .nav
-  margin: auto
-  max-width: 800px
-  display: grid
-  grid-template-columns: repeat(3, 1fr)
+  margin auto
+  max-width 800px
+  display grid
+  grid-template-columns repeat(3, 1fr)
 </style>

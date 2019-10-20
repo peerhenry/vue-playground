@@ -24,6 +24,8 @@ devDependencies:
   node-sass: 4.12.0
   prettier: 1.18.2
   sass-loader: 8.0.0_node-sass@4.12.0
+  stylus: 0.54.7
+  stylus-loader: 3.0.2_stylus@0.54.7
   typescript: 3.5.3
   vue-cli-plugin-pug: 1.0.7
   vue-template-compiler: 2.6.10
@@ -3451,6 +3453,12 @@ packages:
       webpack: ^4.0.0
     resolution:
       integrity: sha512-QTF3Ud5H7DaZotgdcJjGMvyDj5F3Pn1j/sC6VBEOVp94cbwqyIBdcs/quzj4MC1BKQSrTpQznegH/5giYbhnCQ==
+  /css-parse/2.0.0:
+    dependencies:
+      css: 2.2.4
+    dev: true
+    resolution:
+      integrity: sha1-pGjuZnwW2BzPBcWMONKpfHgNv9Q=
   /css-select-base-adapter/0.1.1:
     dev: true
     resolution:
@@ -3715,6 +3723,12 @@ packages:
     dev: true
     resolution:
       integrity: sha512-bC7ElrdJaJnPbAP+1EotYvqZsb3ecl5wi6Bfi6BJTUcNowp6cvspg0jXznRTKDjm/E7AdgFBVeAPVMNcKGsHMA==
+  /debug/3.1.0:
+    dependencies:
+      ms: 2.0.0
+    dev: true
+    resolution:
+      integrity: sha512-OX8XqP7/1a9cqkxYw2yXss15f26NKWBpDXQd0/uK/KPqdQhxbPa994hnzjcE2VqQpDslf55723cKPUOGSmMY3g==
   /debug/3.2.6:
     dependencies:
       ms: 2.1.2
@@ -5218,7 +5232,7 @@ packages:
     dev: true
     resolution:
       integrity: sha512-d4sze1JNC454Wdo2fkuyzCr6aHcbL6PGGuFAz0Li/NcOm1tCHGnWDRmJP85dh9IhQErTc2svWFEX5xHIOo//kQ==
-  /handlebars/4.4.3:
+  /handlebars/4.4.4:
     dependencies:
       neo-async: 2.6.1
       optimist: 0.6.1
@@ -5230,7 +5244,7 @@ packages:
     optionalDependencies:
       uglify-js: 3.6.3
     resolution:
-      integrity: sha512-B0W4A2U1ww3q7VVthTKfh+epHx+q4mCt6iK+zEAzbMBpWQAwxCeKxEGpj/1oQTpzPXDNSOG7hmG14TsISH50yw==
+      integrity: sha512-KDVIZvMQSrWTqwmJABFP5jI1rZDERoSDUD36BpccZni1h690o8cAmh3axy9XmVnT5A5i6KqtvE3lzxV/FOeVqA==
   /har-schema/2.0.0:
     dev: true
     engines:
@@ -6163,7 +6177,7 @@ packages:
       integrity: sha512-R47KzMtDJH6X4/YW9XTx+jrLnZnscW4VpNN+1PViSYTejLVPWv7oov+Duf8YQSPyVRUvueQqz1TcsC6mooZTXw==
   /istanbul-reports/2.2.6:
     dependencies:
-      handlebars: 4.4.3
+      handlebars: 4.4.4
     dev: true
     engines:
       node: '>=6'
@@ -7055,6 +7069,10 @@ packages:
     dev: true
     resolution:
       integrity: sha1-DM8tiRZq8Ds2Y8eWU4t1rG4RTZ0=
+  /lodash.clonedeep/4.5.0:
+    dev: true
+    resolution:
+      integrity: sha1-4j8/nE+Pvd6HJSnBBxhXoIblzO8=
   /lodash.defaultsdeep/4.6.1:
     dev: true
     resolution:
@@ -10093,6 +10111,12 @@ packages:
       node: '>=0.10.0'
     resolution:
       integrity: sha512-UjgapumWlbMhkBgzT7Ykc5YXUT46F0iKu8SGXq0bcwP5dz/h0Plj6enJqjz1Zbq2l5WaqYnrVbwWOWMyF3F47g==
+  /source-map/0.7.3:
+    dev: true
+    engines:
+      node: '>= 8'
+    resolution:
+      integrity: sha512-CkCj6giN3S+n9qrYiBTX5gystlENnRW5jZeNLHpe6aue+SrHcG5VYwujhW9s4dY31mEGsxBDrHR6oI69fTXsaQ==
   /spdx-correct/3.1.0:
     dependencies:
       spdx-expression-parse: 3.0.0
@@ -10460,6 +10484,31 @@ packages:
       node: '>=6.9.0'
     resolution:
       integrity: sha512-7GlLk9JwlElY4Y6a/rmbH2MhVlTyVmiJd1PfTCqFaIBEGMYNsrO/v3SeGTdhBThLg4Z+NbOk/qFMwCa+J+3p/g==
+  /stylus-loader/3.0.2_stylus@0.54.7:
+    dependencies:
+      loader-utils: 1.2.3
+      lodash.clonedeep: 4.5.0
+      stylus: 0.54.7
+      when: 3.6.4
+    dev: true
+    peerDependencies:
+      stylus: '>=0.52.4'
+    resolution:
+      integrity: sha512-+VomPdZ6a0razP+zinir61yZgpw2NfljeSsdUF5kJuEzlo3khXhY19Fn6l8QQz1GRJGtMCo8nG5C04ePyV7SUA==
+  /stylus/0.54.7:
+    dependencies:
+      css-parse: 2.0.0
+      debug: 3.1.0
+      glob: 7.1.4
+      mkdirp: 0.5.1
+      safer-buffer: 2.1.2
+      sax: 1.2.4
+      semver: 6.3.0
+      source-map: 0.7.3
+    dev: true
+    hasBin: true
+    resolution:
+      integrity: sha512-Yw3WMTzVwevT6ZTrLCYNHAFmanMxdylelL3hkWNgPMeTCpMwpV3nXjpOHuBXtFv7aiO2xRuQS6OoAdgkNcSNug==
   /supports-color/2.0.0:
     dev: true
     engines:
@@ -11533,6 +11582,10 @@ packages:
     dev: true
     resolution:
       integrity: sha512-37GeVSIJ3kn1JgKyjiYNmSLP1yzbpb29jdmwBSgkD9h40/hyrR/OifpVUndji3tmwGgD8qpw7iQu3RSbCrBpsQ==
+  /when/3.6.4:
+    dev: true
+    resolution:
+      integrity: sha1-RztRfsFZ4rhQBUl6E5g/CVQS404=
   /which-module/1.0.0:
     dev: true
     resolution:
@@ -11951,6 +12004,8 @@ specifiers:
   prettier: ^1.18.2
   register-service-worker: ^1.6.2
   sass-loader: ^8.0.0
+  stylus: ^0.54.7
+  stylus-loader: ^3.0.2
   typescript: ~3.5.3
   vue: ^2.6.10
   vue-class-component: ^7.0.2
