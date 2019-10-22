@@ -4,7 +4,7 @@ import Home from '../views/Home.vue'
 
 Vue.use(VueRouter)
 
-const routes = [
+export const routes = [
   {
     path: '/',
     name: 'home',
@@ -21,6 +21,14 @@ const routes = [
     name: 'stars',
     component: () =>
       import(/* webpackChunkName: "stars" */ '../views/Stars.vue'),
+  },
+  {
+    path: '/transition',
+    name: 'transition',
+    component: () =>
+      import(
+        /* webpackChunkName: "transition" */ '../views/SmoothTransition.vue'
+      ),
   },
 ]
 

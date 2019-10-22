@@ -1,22 +1,31 @@
 <template lang="pug">
 #app
-  .nav
-    router-link(to="/") Home
-    router-link(to="/about") About
-    router-link(to="/stars") Stars
+  .nav(:style="navStyle")
+    router-link(v-for="route in routes" :key="route.name" :to="route.path") {{route.name}}
   router-view
 </template>
 
-<script lang="ts">
+<script>
 import { Component, Vue } from 'vue-property-decorator'
 import HelloWorld from './components/HelloWorld.vue'
+import { routes } from '@/router/index.ts'
 
-@Component({
-  components: {
-    HelloWorld,
+export default {
+  name: 'App',
+  components: { HelloWorld },
+  data() {
+    return {
+      routes,
+    }
   },
-})
-export default class App extends Vue {}
+  computed: {
+    navStyle() {
+      return {
+        'grid-template-columns': `repeat(${routes.length}, 1fr)`,
+      }
+    },
+  },
+}
 </script>
 
 <style lang="stylus">
